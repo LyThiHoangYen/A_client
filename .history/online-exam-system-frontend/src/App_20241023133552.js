@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="flex h-screen">
       <Sidebar />
-      <ExamManagementDashBoard />
+      
     </div>
   );
 }

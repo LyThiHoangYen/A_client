@@ -1,10 +1,10 @@
 import Sidebar from "./components/sideBar";
-import ExamManagementDashBoard from "./pages/examManagementDashboard";
+import mai
 function App() {
   return (
     <div className="flex h-screen">
       <Sidebar />
-      <ExamManagementDashBoard />
+      <MainContent />
     </div>
   );
 }
