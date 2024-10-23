@@ -1,6 +1,6 @@
 import Header from "../components/header";
 import ResultsTable from "../components/resultsTable";
-import Button from "../components/button";
+import Button from "../components/Button";
 
 function ExamManagementDashBoard () {
     const studentData = [
@@ -14,7 +14,7 @@ function ExamManagementDashBoard () {
       <div className="flex-1 p-8">
         <Header />
         <ResultsTable students={studentData} />
-        <Button text="Back to Dashboard" />
+        <Button />
       </div>
     );
   };

@@ -4,7 +4,7 @@ import StudentExamPage from "./pages/studentExamPage";
 function App() {
   return (
     <div className="flex h-screen">
-      <Sidebar />
+      <Sidebar  />
       <StudentExamPage />
     </div>
   );

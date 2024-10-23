@@ -1,6 +1,6 @@
 import Header from "../components/header";
 import ResultsTable from "../components/resultsTable";
-import Button from "../components/button";
+import Button from "../components/Button";
 
 function ExamManagementDashBoard () {
     const studentData = [

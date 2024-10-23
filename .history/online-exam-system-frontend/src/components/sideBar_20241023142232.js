@@ -1,5 +1,4 @@
 import UserProfile from "./userProfile";
-import Button from "./button";
 
 function Sidebar () {
   return (
@@ -10,6 +9,9 @@ function Sidebar () {
         phone="0917917000"
         examsCreated={10}
       />
+      <button className="mt-auto flex items-center text-white">
+        <i className="fas fa-sign-out-alt mr-2"></i> Sign out
+      </button>
     </div>
   );
   };

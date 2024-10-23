@@ -1,0 +1,12 @@
+// Timer Component
+function Timer ({ timeLeft }) {
+    return (
+    <div className="text-right mb-4">
+      <div className="text-lg font-bold">
+        Time left: <span className="text-red-600">{timeLeft}</span>
+      </div>
+    </div>
+  );
+};
+
+export default Timer;

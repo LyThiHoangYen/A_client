@@ -1,4 +1,4 @@
-import Sidebar from "./components/sidebar";
+import Side
 import StudentExamPage from "./pages/studentExamPage";
 
 function App() {

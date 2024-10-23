@@ -10,6 +10,7 @@ function Sidebar () {
         phone="0917917000"
         examsCreated={10}
       />
+      <Button text="Create Exam" />
     </div>
   );
   };
