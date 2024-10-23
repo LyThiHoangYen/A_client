@@ -14,7 +14,7 @@ function ExamManagementDashBoard () {
       <div className="flex-1 p-8">
         <Header />
         <ResultsTable students={studentData} />
-        <Button text="Create a Exam" />
+        <Button text="Back to Dashboard" />
       </div>
     );
   };
