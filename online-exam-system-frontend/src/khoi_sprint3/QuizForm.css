@@ -28,12 +28,21 @@
 .exam-timing label {
   display: block;
   margin-top: 20px;
+  font-size: 14px;
+  color: white;
 }
 
 .exam-timing input {
   margin-top: 5px;
   padding: 10px;
-  width: 100%; /* Chiếm toàn bộ chiều rộng */
+  width: 100%;
+  box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+  border-radius: 5px;
+  border: none;
+}
+
+.exam-timing input[type="datetime-local"] {
+  padding: 8px; /* Định dạng đặc biệt cho input datetime */
 }
 
 .sign-out {
@@ -95,8 +104,14 @@
   margin: 10px 0; /* Thêm khoảng cách giữa các đáp án */
 }
 
-.option input {
+.option input[type="radio"] {
   margin-right: 10px;
+}
+
+.option input[type="text"] {
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
 }
 
 .add-question-btn {

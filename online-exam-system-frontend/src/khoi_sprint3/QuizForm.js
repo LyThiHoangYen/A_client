@@ -6,6 +6,7 @@ function QuizForm() {
   const [questions, setQuestions] = useState([]);
   const [startTime, setStartTime] = useState('');
   const [endTime, setEndTime] = useState('');
+  const [duration, setDuration] = useState(0); // Thêm state cho Duration
 
   // Thêm một câu hỏi mới
   const addQuestion = () => {
@@ -61,6 +62,13 @@ function QuizForm() {
             type="datetime-local" 
             value={endTime} 
             onChange={(e) => setEndTime(e.target.value)} 
+          />
+          <label>Duration (minutes)</label>
+          <input 
+            type="number" 
+            value={duration} 
+            onChange={(e) => setDuration(e.target.value)} 
+            placeholder="Enter duration" 
           />
         </div>
         <button className="sign-out">Sign out</button>
