@@ -1,0 +1,111 @@
+.quiz-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: #4646EA;
+  color: white;
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-info {
+  text-align: center;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.exam-timing label {
+  display: block;
+  margin-top: 20px;
+}
+
+.exam-timing input {
+  margin-top: 5px;
+  padding: 10px;
+  width: 100%; /* Chiếm toàn bộ chiều rộng */
+}
+
+.sign-out {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.quiz-form {
+  flex-grow: 1;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.quiz-header label {
+  margin-right: 10px;
+}
+
+.quiz-header input {
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.create-btn {
+  padding: 10px 20px;
+  background-color: #4646EA;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.question-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.options {
+  display: flex;
+  flex-direction: column; /* Sắp xếp theo cột */
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin: 10px 0; /* Thêm khoảng cách giữa các đáp án */
+}
+
+.option input {
+  margin-right: 10px;
+}
+
+.add-question-btn {
+  padding: 10px 20px;
+  background-color: #4646EA;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+}
