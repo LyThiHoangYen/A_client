@@ -147,7 +147,7 @@ function StudentExamPage() {
       <div className="w-1/4 min-w-[250px] h-full overflow-auto">
         <div className="h-full p-8 bg-gray-100 flex flex-col justify-between">
           <div>
-            <Timer initialTime={3600} onTimeUp={handleTimeUp} />
+            <Timer initialTime={3600} onTimeUp={handleTimeUp} /> {/* 1 hour in seconds */}
             <div className="mb-8">
               <div className="text-lg font-bold mb-2">Progress</div>
               <div className="text-sm">
@@ -164,8 +164,7 @@ function StudentExamPage() {
           <div className="flex justify-between">
             <Button 
               className="bg-green-500 text-white hover:bg-green-600 py-2 px-4 rounded-full flex items-center"
-              onClick={() => handleSubmit(false)}
-              disabled={isExamSubmitted}
+              onClick={handleSubmit}
             >
               📤 Submit
             </Button>

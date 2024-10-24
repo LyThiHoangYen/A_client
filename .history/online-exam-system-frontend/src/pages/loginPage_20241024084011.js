@@ -2,19 +2,18 @@ import { useNavigate } from 'react-router-dom';
 import LoginForm from "../components/loginForm";
 import Footer from "../components/footer";
 import Logo from "../components/logo";
-import ExamManagementDashBoard from './pages/examManagementDashboard';
 
 
 function Login () {
     const navigate = useNavigate();
   
     const handleClick = () => {
-      navigate('/exam-management-dashboard');
+      navigate('/exam');
     };
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      navigate('/exam-management-dashboard');
+      navigate('/exam');
     };
   
     return (

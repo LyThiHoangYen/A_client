@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import LoginForm from "../components/loginForm";
 import Footer from "../components/footer";
 import Logo from "../components/logo";
-import ExamManagementDashBoard from './pages/examManagementDashboard';
 
 
 function Login () {

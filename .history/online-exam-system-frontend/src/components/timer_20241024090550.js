@@ -1,21 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
 // Timer Component
-function Timer ({ initialTime, onTimeUp }) {
+function Timer ({ initialTime }) {
   const [timeLeft, setTimeLeft] = useState(initialTime);
 
   useEffect(() => {
-    if (timeLeft <= 0) {
-      onTimeUp();
-      return;
-    }
+    if (timeLeft <= 0) return;
 
     const intervalId = setInterval(() => {
       setTimeLeft(prevTime => prevTime - 1);
     }, 1000);
 
     return () => clearInterval(intervalId);
-  }, [timeLeft, onTimeUp]);
+  }, [timeLeft]);
 
   const formatTime = (seconds) => {
     const minutes = Math.floor(seconds / 60);

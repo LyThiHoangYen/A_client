@@ -18,7 +18,6 @@ function StudentExamPage() {
   const [examInfo, setExamInfo] = useState(null);
   const [showResult, setShowResult] = useState(false);
   const [examScore, setExamScore] = useState(0);
-  const [isExamSubmitted, setIsExamSubmitted] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -56,9 +55,12 @@ function StudentExamPage() {
     navigate('/login');
   };
 
-  const handleSubmit = async (isAutoSubmit = false) => {
-    if (isExamSubmitted) return;
+  const progress = questions.map(q => ({
+    questionNumber: q.number,
+    answer: answers[q.number] || ''
+  }));
 
+  const handleSubmit = async () => {
     try {
       // Here you would typically send the answers to your backend
       // and receive a score in response. For this example, we'll
@@ -66,11 +68,6 @@ function StudentExamPage() {
       const score = Math.floor(Math.random() * (questions.length + 1));
       setExamScore(score);
       setShowResult(true);
-      setIsExamSubmitted(true);
-
-      if (isAutoSubmit) {
-        console.log('Exam auto-submitted due to time expiration');
-      }
     } catch (error) {
       console.error('Error submitting exam:', error);
       // Handle error (e.g., show an error message to the user)
@@ -81,15 +78,6 @@ function StudentExamPage() {
     setShowResult(false);
     // Optionally navigate away or reset the exam state here
   };
-
-  const handleTimeUp = () => {
-    handleSubmit(true);
-  };
-
-  const progress = questions.map(q => ({
-    questionNumber: q.number,
-    answer: answers[q.number] || ''
-  }));
 
   if (loading) {
     return <div>Loading...</div>;
@@ -147,7 +135,7 @@ function StudentExamPage() {
       <div className="w-1/4 min-w-[250px] h-full overflow-auto">
         <div className="h-full p-8 bg-gray-100 flex flex-col justify-between">
           <div>
-            <Timer initialTime={3600} onTimeUp={handleTimeUp} />
+            <Timer initialTime={3600} /> {/* 1 hour in seconds */}
             <div className="mb-8">
               <div className="text-lg font-bold mb-2">Progress</div>
               <div className="text-sm">
@@ -164,8 +152,7 @@ function StudentExamPage() {
           <div className="flex justify-between">
             <Button 
               className="bg-green-500 text-white hover:bg-green-600 py-2 px-4 rounded-full flex items-center"
-              onClick={() => handleSubmit(false)}
-              disabled={isExamSubmitted}
+              onClick={handleSubmit}
             >
               📤 Submit
             </Button>
